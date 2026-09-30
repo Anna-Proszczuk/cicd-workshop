@@ -4,7 +4,7 @@ name: CI
 #
 # Everything below works: it checks out the code, installs dependencies and runs all the
 # tests. It is also slow, wasteful and tells you almost nothing until it finishes.
-# Every exercise in docs/zadania/ takes one problem from this file and fixes it.
+# Every exercise of the workshop takes one problem from this file and fixes it.
 #
 # Do not "improve" this file before EXERCISE 01. Measuring it as it stands is the exercise.
 

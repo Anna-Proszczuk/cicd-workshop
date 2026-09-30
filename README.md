@@ -30,7 +30,10 @@ npm run dev             # aplikacja na http://localhost:5173
 | `tests/api/` | 44 testy API (Playwright) |
 | `tests/ui/` | 123 testy UI — 5 oznaczonych `@smoke`, reszta to regresja |
 | `.github/workflows/ci.yml` | **wyjściowy pipeline — punkt startu warsztatu** |
-| `docs/zadania/` | zadania warsztatowe |
+| `docs/baseline.md` | szablon pomiarów, który uzupełniasz w ZADANIU 01 |
+
+Zadania pojawiają się w trakcie warsztatu na branchu
+[`zadania`](https://github.com/tklepacki/cicd-fast-feedback-workshop/tree/zadania).
 
 ## Aplikacja
 
