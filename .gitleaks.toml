@@ -20,8 +20,7 @@ regex = '''wshop_sk_live_[A-Za-z0-9]{24,}'''
 tags = ["key", "workshop"]
 
 [allowlist]
-description = "The rule definition itself and the documentation describing it"
+description = "The rule definition itself"
 paths = [
   '''\.gitleaks\.toml$''',
-  '''docs/zadania/.*\.md$''',
 ]

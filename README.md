@@ -68,7 +68,6 @@ Darmowa dostawa od 200 zł, poniżej progu 15 zł.
 | `npm run test:ui` | testy UI (Chromium) |
 | `npm run test:smoke` | tylko testy `@smoke` |
 | `npm run verify` | lint + typecheck + build + testy jednostkowe |
-| `npm run openapi:dump` | zapisuje kontrakt API do pliku |
 
 ## Dwie zmienne środowiskowe, które warto znać
 

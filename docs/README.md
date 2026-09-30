@@ -110,7 +110,7 @@ uruchomiona.
 
 Po utworzeniu repozytorium pipeline uruchamia się automatycznie. Przejdź do swojego repozytorium
 na GitHubie, otwórz zakładkę **Actions** i zaczekaj na zakończenie pierwszego przebiegu.
-Powinien zakończyć się na zielono i trwać około czterech minut.
+Powinien zakończyć się na zielono i trwać nieco ponad trzy minuty.
 
 Jeśli zobaczysz informację, że workflowy są wyłączone, włącz je przyciskiem na tej stronie,
 a następnie wypchnij dowolny commit na `main`.
@@ -127,7 +127,7 @@ git push
 
 Push powinien przejść bez błędów, a w zakładce **Actions** powinien pojawić się nowy przebieg.
 
-> **Cztery minuty to nie błąd, tylko nasz punkt wyjścia.** Podczas warsztatu będziemy
+> **Trzy minuty to nie błąd, tylko nasz punkt wyjścia.** Podczas warsztatu będziemy
 > stopniowo skracać ten czas, a na koniec porównamy wyniki i sprawdzimy, które zmiany
 > rzeczywiście pomogły.
 
