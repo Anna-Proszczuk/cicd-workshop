@@ -1,6 +1,6 @@
 # Przygotowanie do warsztatu
 
-**Szybki feedback w CI/CD: pipeline, który testuje i raportuje bez utraty jakości**
+**Szybki feedback w CI/CD: jak zaprojektować pipeline, który buduje, testuje i wdraża bez utraty jakości**
 
 Warsztat ma charakter praktyczny — większość czasu spędzisz, pracując we własnym repozytorium.
 Aby nie tracić pierwszej godziny na instalację i konfigurację środowiska, **wykonaj poniższe
