@@ -28,6 +28,8 @@ do sekundy.
 | `demo/failing-unit` | | |
 | `demo/failing-search` | — | |
 
+Co na `demo/failing-unit` stało się z testami API i UI:
+
 ## `demo/failing-lint` i `demo/failing-security`
 
 | Branch | Wynik przebiegu | Dlaczego tak |
