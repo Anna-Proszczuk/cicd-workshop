@@ -38,7 +38,7 @@ async function readSuite(file) {
 
 const files = process.argv.slice(2);
 if (files.length === 0) {
-  console.error('Podaj co najmniej jeden plik JUnit XML');
+  console.error('Pass at least one JUnit XML file');
   process.exit(1);
 }
 
@@ -53,7 +53,7 @@ for (const file of files) {
   }
 }
 
-const lines = ['## Wyniki testów', '', '| Zestaw | Testy | Błędy | Pominięte | Czas |', '|---|---:|---:|---:|---:|'];
+const lines = ['## Test results', '', '| Suite | Tests | Failures | Skipped | Time |', '|---|---:|---:|---:|---:|'];
 
 let anyFailure = false;
 for (const s of suites) {
@@ -68,7 +68,7 @@ for (const s of suites) {
 }
 
 const total = suites.filter((s) => !s.missing).reduce((sum, s) => sum + s.tests, 0);
-lines.push('', anyFailure ? `**Część z ${total} testów nie przeszła.**` : `**Wszystkie ${total} testów przeszło.**`);
+lines.push('', anyFailure ? `**Some of the ${total} tests failed.**` : `**All ${total} tests passed.**`);
 
 const output = lines.join('\n') + '\n';
 if (process.env.GITHUB_STEP_SUMMARY) {
