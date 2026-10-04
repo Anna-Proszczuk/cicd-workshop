@@ -121,7 +121,7 @@ Na koniec sprawdź, czy możesz wysyłać zmiany do swojego repozytorium — od 
 będzie to potrzebne:
 
 ```bash
-git commit --allow-empty -m "Sprawdzenie dostępu"
+git commit --allow-empty -m "Check push access"
 git push
 ```
 
