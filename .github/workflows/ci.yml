@@ -1,4 +1,29 @@
-steps:
+name: CI
+
+# The starting point of the workshop.
+#
+# Everything below works: it checks out the code, installs dependencies and runs all the
+# tests. It is also slow, wasteful and tells you almost nothing until it finishes.
+# Every exercise of the workshop takes one problem from this file and fixes it.
+#
+# Do not "improve" this file before EXERCISE 01. Measuring it as it stands is the exercise.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -11,7 +36,7 @@ steps:
       - name: Install dependencies
         run: npm ci
 
-      - name: Resolve Playwright version
+        name: Resolve Playwright version
         id: pw
         run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
 
@@ -26,7 +51,7 @@ steps:
         if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install chromium
 
-      - name: Lint
+        name: Lint
         run: npm run lint
 
       - name: Typecheck
@@ -49,5 +74,3 @@ steps:
         with:
           name: playwright-report
           path: playwright-report/
-
-      
