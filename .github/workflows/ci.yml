@@ -51,7 +51,7 @@ jobs:
         if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install chromium
 
-        name: Lint
+      - name: Lint
         run: npm run lint
 
       - name: Typecheck
