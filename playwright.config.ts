@@ -23,7 +23,9 @@ export default defineConfig({
   // No retries. Right now every flaky test is a red build - EXERCISE 12.
   retries: 0,
 
-  reporter: [['list'], ['html', { open: 'never' }]],
+  reporter: process.env.CI
+    ? [['blob'], ['github']]
+    : [['list'], ['html', { open: 'never' }]],
 
   use: {
     baseURL,
